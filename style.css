@@ -186,6 +186,12 @@ footer .brand{font-size:1.05rem;}
 }
 
 /* ---------- teaching ---------- */
+.course{display:grid;grid-template-columns:1fr 320px;gap:clamp(30px,5vw,58px);align-items:start;}
+.course-body p{font-size:1.06rem;color:var(--ink-soft);margin-bottom:18px;}
+.course-body h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.16rem;margin:28px 0 12px;}
+.course-body h3::before{content:"";display:block;width:30px;height:2px;background:var(--accent);margin-bottom:12px;}
+.course-body ul{padding-left:20px;font-size:1.03rem;color:var(--ink-soft);}
+.course-body li{margin-bottom:9px;}
 .teach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:34px;margin-top:8px;}
 .teach-card{border-top:2px solid var(--accent);padding-top:16px;}
 .teach-card .tc-term{font-family:"Fraunces",serif;font-style:italic;color:var(--accent);font-size:.95rem;}
@@ -247,6 +253,7 @@ footer .brand{font-size:1.05rem;}
   .nav-links.open{max-height:380px;}
   .nav-links li{padding:14px clamp(20px,5vw,72px);border-top:1px solid var(--line);}
   .hero{grid-template-columns:1fr;}
+  .course{grid-template-columns:1fr;}
   .portrait{max-width:340px;}
   .paper{grid-template-columns:1fr;gap:4px;}
   .contact-grid{grid-template-columns:1fr;gap:30px;}
