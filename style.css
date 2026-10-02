@@ -115,6 +115,15 @@ footer .brand{font-size:1.05rem;}
 }
 .links a:hover{color:var(--accent);border-color:var(--accent);}
 
+.cvlist{display:grid;gap:11px;}
+.cvlist > div{display:grid;grid-template-columns:5.5em 1fr;gap:16px;align-items:baseline;}
+.cvlist dt{color:var(--accent);}
+.cvlist dd{color:var(--ink-soft);}
+.note{margin-top:24px;color:var(--ink-soft);font-size:1.02rem;}
+@media(max-width:560px){
+  .cvlist > div{grid-template-columns:1fr;gap:0;}
+}
+
 /* Used by the course panel on the teaching page. */
 .factcard{
   background:var(--paper-2);border:1px solid var(--line);
