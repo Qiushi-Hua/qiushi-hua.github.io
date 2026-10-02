@@ -1,13 +1,21 @@
 """Stamp style.css and site.js with a version so a changed file gets a new URL.
 
-GitHub Pages serves assets with Cache-Control: max-age=600, so without this a
-visitor who loaded the old stylesheet sees the new HTML against it for up to
-ten minutes. Run this with a fresh number after every style.css or site.js edit.
+GitHub Pages serves assets with Cache-Control: max-age=600. Without this, a
+visitor who already has the old stylesheet renders the new HTML against it for
+up to ten minutes. Run with a fresh number after every style.css or site.js
+edit, then commit:
+
+    python bump-assets.py 8
+
+404.html links its assets absolutely, because Pages serves that page for any
+path depth and a relative link would resolve against the wrong directory.
 """
 import glob, io, re, sys
 
 ver = sys.argv[1]
-pat = re.compile(r'(href="style\.css|src="site\.js)(\?v=[^"]*)?"')
+pat = re.compile(
+    r'((?:href|src)="(?:https://qiushi-hua\.github\.io/)?(?:style\.css|site\.js))(\?v=[^"]*)?"'
+)
 
 for f in sorted(glob.glob('*.html')):
     s = io.open(f, encoding='utf-8').read()

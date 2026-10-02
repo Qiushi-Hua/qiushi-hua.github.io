@@ -17,14 +17,36 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Qiushi Hua",
+  "alternateName": "华秋石",
+  "url": "https://qiushi-hua.github.io/",
+  "image": "https://qiushi-hua.github.io/photo.jpg",
+  "jobTitle": "PhD Candidate in Economics",
+  "email": "mailto:huaqiushiwork@gmail.com",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Florida"
+  },
+  "knowsAbout": ["Monetary policy", "Macroeconomics", "Firm dynamics"],
+  "sameAs": [
+    "https://www.linkedin.com/in/qiushi-hua-5a113523b/",
+    "https://scholar.google.com/citations?user=_VODLB4AAAAJ&hl=en"
+  ]
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <a href="index.html" class="brand">Qiushi&nbsp;<span>Hua</span></a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">About</a></li>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="active" aria-current="page">About</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="teaching.html">Teaching</a></li>
     <li><a href="https://drive.google.com/file/d/1J2ghugQ4NehoioRy-Df2q35vFJYCcC8t/view?usp=drive_link" target="_blank" rel="noopener">CV</a></li>
@@ -33,10 +55,10 @@
   </ul>
 </nav>
 
-<main>
+<main id="main">
 
   <section id="about" class="hero">
-    <div class="reveal">
+    <div>
       <p class="eyebrow">华秋石</p>
       <h1>Qiushi&nbsp;Hua</h1>
       <p class="role">Monetary Economics &nbsp;·&nbsp; University of Florida</p>
@@ -65,7 +87,7 @@
       </div>
     </div>
 
-    <div class="portrait reveal">
+    <div class="portrait">
       <img src="photo.jpg" alt="Qiushi Hua" width="800" height="1000">
     </div>
   </section>
@@ -76,6 +98,6 @@
   <div>&copy; 2026 Qiushi Hua &middot; Gainesville, FL</div>
 </footer>
 
-<script src="site.js?v=6"></script>
+<script src="site.js?v=7"></script>
 </body>
 </html>

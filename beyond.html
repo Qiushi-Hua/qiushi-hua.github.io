@@ -17,28 +17,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <a href="index.html" class="brand">Qiushi&nbsp;<span>Hua</span></a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
-  <ul class="nav-links">
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html">About</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="teaching.html">Teaching</a></li>
     <li><a href="https://drive.google.com/file/d/1J2ghugQ4NehoioRy-Df2q35vFJYCcC8t/view?usp=drive_link" target="_blank" rel="noopener">CV</a></li>
-    <li><a href="beyond.html" class="active">Beyond</a></li>
+    <li><a href="beyond.html" class="active" aria-current="page">Beyond</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<main>
+<main id="main">
 
   <section class="page-head">
-    <h1 class="reveal">Beyond research</h1>
-    <p class="lede reveal">
+    <h1>Beyond research</h1>
+    <p class="lede">
       Away from economics I cook, mostly Chinese home food, with a couple of
       fermentation projects going at any time. I hike when I can get a day free,
       and camp a few times a year, usually in a national park when the drive is
@@ -57,6 +58,6 @@
   <div>&copy; 2026 Qiushi Hua &middot; Gainesville, FL</div>
 </footer>
 
-<script src="site.js?v=6"></script>
+<script src="site.js?v=7"></script>
 </body>
 </html>

@@ -1,29 +1,27 @@
-// Shared behaviour for every page: mobile menu and scroll reveal.
+// The only script on the site: open and close the menu on narrow screens.
+// Nothing here gates content, so the pages read fine with JavaScript off.
 (function () {
   var toggle = document.querySelector('.nav-toggle');
   var links = document.querySelector('.nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', function () {
-      var open = links.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    links.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { links.classList.remove('open'); });
-    });
-  }
+  if (!toggle || !links) return;
 
-  var targets = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window)) {
-    targets.forEach(function (el) { el.classList.add('in'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (e) {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  toggle.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  links.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
     });
-  }, { threshold: 0.12 });
-  targets.forEach(function (el, i) {
-    el.style.transitionDelay = (i % 4) * 0.08 + 's';
-    io.observe(el);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
   });
 })();

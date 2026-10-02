@@ -17,27 +17,28 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <nav>
   <a href="index.html" class="brand">Qiushi&nbsp;<span>Hua</span></a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
-  <ul class="nav-links">
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html">About</a></li>
     <li><a href="research.html">Research</a></li>
-    <li><a href="teaching.html" class="active">Teaching</a></li>
+    <li><a href="teaching.html" class="active" aria-current="page">Teaching</a></li>
     <li><a href="https://drive.google.com/file/d/1J2ghugQ4NehoioRy-Df2q35vFJYCcC8t/view?usp=drive_link" target="_blank" rel="noopener">CV</a></li>
     <li><a href="beyond.html">Beyond</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<main>
+<main id="main">
 
   <section class="page-head">
-    <h1 class="reveal">Teaching</h1>
-    <p class="lede reveal">
+    <h1>Teaching</h1>
+    <p class="lede">
       I am the instructor of record for ECO 4213 Monetary Economics at the
       University of Florida. I wrote the syllabus, the slides, the problem sets and
       both exams. Before that I spent two years as a teaching assistant in
@@ -48,10 +49,10 @@
   <div class="rule"></div>
 
   <section>
-    <h2 class="subhead reveal">ECO 4213 &nbsp;Monetary Economics</h2>
+    <h2 class="subhead">ECO 4213 &nbsp;Monetary Economics</h2>
     <div class="course">
 
-      <div class="course-body reveal">
+      <div class="course-body">
         <p>
           A 4000-level course on monetary policy. The first half covers central
           banks, the money supply process and how interest rates get set, then the
@@ -85,7 +86,7 @@
         </ul>
       </div>
 
-      <div class="factcard reveal">
+      <div class="factcard">
         <dl>
           <dt>Role</dt>
           <dd>Instructor of record</dd>
@@ -108,9 +109,9 @@
   <div class="rule"></div>
 
   <section>
-    <h2 class="subhead reveal">Earlier teaching</h2>
+    <h2 class="subhead">Earlier teaching</h2>
     <div class="teach-grid">
-      <div class="teach-card reveal">
+      <div class="teach-card">
         <p class="tc-term">Teaching assistant &middot; Aug 2022 to May 2024</p>
         <h3>Intermediate Macroeconomic Theory</h3>
         <p>Undergraduate &middot; University of Florida</p>
@@ -130,6 +131,6 @@
   <div>&copy; 2026 Qiushi Hua &middot; Gainesville, FL</div>
 </footer>
 
-<script src="site.js?v=6"></script>
+<script src="site.js?v=7"></script>
 </body>
 </html>

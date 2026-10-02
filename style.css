@@ -78,8 +78,13 @@ footer{
   max-width:1180px;margin:0 auto;font-size:.95rem;color:var(--ink-soft);
 }
 footer .brand{font-size:1.05rem;}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease;}
-.reveal.in{opacity:1;transform:none;}
+/* Keyboard users land here first; it stays off screen until focused. */
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--ink);color:var(--paper);padding:12px 20px;
+  font-family:"Fraunces",serif;font-size:.95rem;text-decoration:none;
+}
+.skip:focus{left:0;}
 
 /* ---------- home ---------- */
 .hero{
@@ -217,6 +222,19 @@ footer .brand{font-size:1.05rem;}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
-  .reveal{opacity:1;transform:none;transition:none;}
   .btn:hover{transform:none;}
+}
+
+/* ---------- print ---------- */
+@media print{
+  body{background:#fff;color:#000;font-size:11pt;}
+  body::before,nav,footer,.back-strip,.skip,.rule,.portrait{display:none;}
+  main{padding-top:0;}
+  section,.hero,.page-head{padding:0 0 16pt;max-width:none;display:block;}
+  .course{display:block;}
+  .factcard{border:none;background:none;padding:12pt 0 0;}
+  h1,h2,h3{page-break-after:avoid;}
+  .paper{page-break-inside:avoid;}
+  a{text-decoration:none;color:#000;}
+  .plinks a::after{content:" (" attr(href) ")";font-size:9pt;word-break:break-all;}
 }
