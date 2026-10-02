@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Qiushi Hua — Monetary Policy Economist</title>
-<meta name="description" content="Qiushi Hua is a PhD candidate in economics at the University of Florida, graduating April 2027. He studies monetary policy and firm behaviour using firm-level panel data.">
+<title>Qiushi Hua — Monetary Economics</title>
+<meta name="description" content="Qiushi Hua is a PhD candidate in economics at the University of Florida, graduating April 2027. His field is monetary policy.">
 <link rel="canonical" href="https://qiushi-hua.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://qiushi-hua.github.io/">
-<meta property="og:title" content="Qiushi Hua — Monetary Policy Economist">
-<meta property="og:description" content="PhD candidate in economics at the University of Florida, graduating April 2027. Monetary policy, firm-level panel data, local projections.">
+<meta property="og:title" content="Qiushi Hua — Monetary Economics">
+<meta property="og:description" content="PhD candidate in economics at the University of Florida, graduating April 2027. Monetary policy, firm-level panel data.">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,13 +40,13 @@
       <h1>Qiushi&nbsp;Hua</h1>
       <p class="role">Monetary Economics &nbsp;·&nbsp; University of Florida</p>
       <p class="bio">
-        I work on monetary policy. My job market paper asks what happens to firm
-        innovation when the Fed moves rates, using a firm-level panel I built by
-        joining Compustat, USPTO and CRSP.
+        I am a PhD candidate in economics at the University of Florida. My field is
+        monetary policy, and my job market paper asks what a Fed rate shock does to
+        corporate R&amp;D and patenting.
       </p>
       <p class="bio last">
-        I finish my PhD in April 2027 and am looking for economist and data science
-        roles starting then.
+        I graduate in April 2027. I am looking for economist or data scientist
+        positions.
       </p>
       <div class="actions">
         <a href="https://drive.google.com/file/d/1J2ghugQ4NehoioRy-Df2q35vFJYCcC8t/view?usp=drive_link" target="_blank" rel="noopener" class="btn">Curriculum Vitae <span>&rarr;</span></a>
@@ -62,91 +62,72 @@
          replace the <div class="factcard"> block with
          <div class="portrait"><img src="photo.jpg" alt="Qiushi Hua"></div> -->
     <div class="factcard reveal">
-      <h2>At a glance</h2>
       <dl>
         <dt>Degree</dt>
         <dd>Ph.D. Economics, University of Florida</dd>
-        <dt>Available</dt>
+        <dt>Graduating</dt>
         <dd>April 2027</dd>
-        <dt>Fields</dt>
-        <dd>Monetary economics, macroeconomics, firm dynamics</dd>
-        <dt>Tools</dt>
+        <dt>Field</dt>
+        <dd>Monetary policy and macroeconomics</dd>
+        <dt>Software</dt>
         <dd>Python, Julia, R, Matlab, Stata, SQL</dd>
-        <dt>Based in</dt>
-        <dd>Gainesville, FL. Open to relocation.</dd>
+        <dt>Location</dt>
+        <dd>Gainesville, Florida. Willing to relocate.</dd>
       </dl>
     </div>
   </section>
 
   <div class="rule"></div>
 
-  <!-- WHAT I DO -->
+  <!-- METHODS -->
   <section>
-    <p class="seclabel reveal">What I do</p>
-    <div class="skill-grid">
-      <div class="skill reveal">
-        <h3>Causal inference on macro shocks</h3>
-        <p>
-          I use local projections and panel methods to trace how a monetary policy
-          shock moves firm outcomes over the quarters that follow, and to separate
-          effects on quantity from effects on quality.
-        </p>
-      </div>
-      <div class="skill reveal">
-        <h3>Firm-level data at scale</h3>
-        <p>
-          I join Compustat, USPTO, CRSP and FRED into reproducible panels, reconcile
-          inconsistent entity IDs, and keep a change log so results can be rebuilt
-          from raw files.
-        </p>
-      </div>
-      <div class="skill reveal">
-        <h3>Structural models</h3>
-        <p>
-          I solve heterogeneous-firm dynamic programs by value function iteration in
-          Julia and Matlab, check numerical stability with forward and backward
-          passes, then simulate transition paths after an aggregate shock.
-        </p>
-      </div>
-      <div class="skill reveal">
-        <h3>Text and machine learning</h3>
-        <p>
-          I built an NLP pipeline over millions of online job postings that classifies
-          roles, extracts skills, and tracks employer demand by industry and region,
-          reported through interactive dashboards.
-        </p>
-      </div>
+    <h2 class="subhead reveal">Methods and data</h2>
+    <div class="prose reveal">
+      <p>
+        Most of my work is empirical. I line a series of monetary policy shocks up
+        against firm-level outcomes and estimate the response over the following
+        quarters with local projections. Building the panel is usually the longer
+        half of the job. For the job market paper I had to match patents to the
+        firms that filed them and reconcile identifiers that disagree across
+        Compustat, USPTO and CRSP.
+      </p>
+      <p>
+        When a question needs structure rather than a regression I solve
+        heterogeneous-firm models numerically, in Julia and Matlab, by value
+        function iteration.
+      </p>
+      <p>
+        One project sits well outside macro. I built a pipeline that reads several
+        million online job postings and tracks which skills employers ask for, by
+        industry and region. Topic modelling and a supervised classifier do the
+        text work. The output is a dashboard.
+      </p>
     </div>
   </section>
 
   <div class="rule"></div>
 
-  <!-- EXPLORE -->
+  <!-- ELSEWHERE ON THE SITE -->
   <section>
-    <p class="seclabel reveal">Explore</p>
     <div class="explore-grid">
       <a href="research.html" class="explore-card reveal">
-        <p class="ec-label">Job market paper and more</p>
         <h3>Research</h3>
-        <p>Monetary policy and firm innovation, lumpy investment, labour market text data.</p>
+        <p>The job market paper, and two other projects.</p>
         <span class="arrow">&rarr;</span>
       </a>
       <a href="teaching.html" class="explore-card reveal">
-        <p class="ec-label">A course of my own</p>
         <h3>Teaching</h3>
-        <p>I designed and teach ECO 4213 Monetary Economics, a 4000-level course at Florida.</p>
+        <p>ECO 4213 Monetary Economics. I run the course on my own.</p>
         <span class="arrow">&rarr;</span>
       </a>
       <a href="https://drive.google.com/file/d/1J2ghugQ4NehoioRy-Df2q35vFJYCcC8t/view?usp=drive_link" target="_blank" rel="noopener" class="explore-card reveal">
-        <p class="ec-label">One page, current</p>
         <h3>Curriculum Vitae</h3>
-        <p>Education, papers, teaching, and technical skills.</p>
+        <p>One page, as a PDF.</p>
         <span class="arrow">&rarr;</span>
       </a>
       <a href="beyond.html" class="explore-card reveal">
-        <p class="ec-label">Off the clock</p>
-        <h3>Beyond Research</h3>
-        <p>Cooking, hiking, and camping. Life between papers.</p>
+        <h3>Beyond research</h3>
+        <p>Cooking, hiking and camping.</p>
         <span class="arrow">&rarr;</span>
       </a>
     </div>
