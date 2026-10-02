@@ -122,11 +122,11 @@ footer .brand{font-size:1.05rem;}
 .links a:hover{color:var(--accent);border-color:var(--accent);}
 
 /* Facts sit in a strip under the hero, so the portrait gets the whole column. */
-.hero.has-strip{padding-bottom:clamp(28px,4vw,46px);}
+.hero.has-strip{padding-bottom:clamp(18px,3vw,32px);}
 .factstrip{
   max-width:1180px;margin:0 auto;position:relative;z-index:2;
-  padding:0 clamp(20px,5vw,72px) clamp(48px,7vw,86px);
-  display:flex;flex-wrap:wrap;gap:20px clamp(28px,5vw,60px);
+  padding:0 clamp(20px,5vw,72px) clamp(44px,6vw,76px);
+  display:flex;flex-wrap:wrap;gap:18px clamp(30px,5vw,64px);
 }
 .factstrip dt{
   font-family:"Fraunces",serif;font-size:.76rem;letter-spacing:.09em;
