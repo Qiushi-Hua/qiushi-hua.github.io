@@ -121,6 +121,10 @@ footer .brand{font-size:1.05rem;}
 .cvlist dd{color:var(--ink-soft);}
 .note{margin-top:24px;color:var(--ink-soft);font-size:1.02rem;}
 .note.lead{margin-top:0;margin-bottom:26px;max-width:46em;}
+.talist{display:grid;gap:17px;max-width:46em;}
+.ta-course{font-size:1.04rem;}
+.ta-level{color:var(--ink-soft);}
+.ta-term{font-size:.95rem;color:var(--ink-soft);margin-top:1px;}
 @media(max-width:560px){
   .cvlist > div{grid-template-columns:1fr;gap:0;}
 }
