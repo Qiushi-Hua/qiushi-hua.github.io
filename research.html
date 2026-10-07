@@ -149,23 +149,27 @@
           <h3>Fixed Costs in Lumpy Investment Models</h3>
           <p class="meta">Solo &middot; model and simulation stage</p>
           <p class="abs">
-            The job market paper finds that innovation responds to monetary policy on
-            the intensive margin. For physical capital the literature finds the
-            opposite. The extensive margin, meaning which firms invest at all, carries the
-            investment channel. This project looks at the physical side directly. Firms
-            are heterogeneous in productivity, face a fixed cost of adjusting capital,
-            and see only a noisy signal of their own productivity before they decide.
-            The question is how the fixed cost and the noise together decide which firms
-            move after an aggregate shock, and how much of the aggregate response they
-            account for.
+            My job market paper finds that innovation responds to monetary policy on the
+            intensive margin, among firms that already run R&amp;D. For physical capital the
+            literature finds the opposite. What carries the investment channel there is
+            the extensive margin, meaning which firms adjust their capital at all. This
+            project takes the physical side directly and asks what decides that margin.
+          </p>
+          <p class="abs">
+            Firms in the model differ in productivity and pay a fixed cost whenever they
+            adjust capital, so investment arrives in lumps rather than a smooth stream.
+            Each firm also sees only a noisy signal of its own productivity before it
+            decides. The question is how the fixed cost and the signal noise together
+            select which firms move after an aggregate shock, and how much of the
+            aggregate response those firms account for.
           </p>
           <p class="abs">
             I solve the firm&rsquo;s dynamic program by value function iteration in Julia and
-            Matlab, with forward and backward iteration checks for numerical stability,
+            Matlab, with forward and backward iteration checks for numerical stability. I
             calibrate the productivity process and the adjustment cost to observed
-            investment patterns, and trace transition paths after a shock with Monte
-            Carlo simulation across parameter grids and policy scenarios. The heavy
-            runs go to the UF HiPerGator cluster.
+            investment patterns. Transition paths after a shock come from Monte Carlo
+            simulation, run across parameter grids and alternative policy scenarios. The
+            heavy runs go to the UF HiPerGator cluster.
           </p>
           <span class="tag">Firm dynamics</span>
           <span class="tag">Structural model</span>
@@ -181,14 +185,21 @@
           <h3>Labor Market and Skill Demand in AI Job Postings</h3>
           <p class="meta">Applied data project</p>
           <p class="abs">
-            A pipeline reads several million online job postings, classifies each role
-            and pulls out the skills it asks for. The text work is
-            preprocessing, semantic feature extraction, a supervised classifier for the
-            role labels and topic modeling for the skill clusters. The output is a set of
-            interactive dashboards and trend reports on employer demand for AI-related
-            skills by industry and region. My other work asks what technology does to
-            investment. This asks the hiring side of the same question, where in the
-            labor market demand for these skills is spreading and how fast.
+            Which skills are employers actually asking for as AI spreads, and where? This
+            project reads several million online job postings and turns them into a
+            measure of skill demand by industry and region.
+          </p>
+          <p class="abs">
+            The pipeline cleans the posting text and extracts semantic features from it. A
+            supervised classifier puts a role label on each posting, and topic modeling
+            groups the skills those postings ask for. Trend analysis on top of that tracks
+            how the demand moves over time. The output is a set of interactive dashboards
+            and trend reports.
+          </p>
+          <p class="abs">
+            My other work asks what technology does to firm investment. This asks the
+            hiring side of the same question, where in the labor market demand for these
+            skills is spreading and how fast.
           </p>
           <span class="tag">NLP</span>
           <span class="tag">Supervised learning</span>
