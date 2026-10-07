@@ -244,3 +244,12 @@ footer .brand{font-size:1.05rem;}
   a{text-decoration:none;color:#000;}
   .plinks a::after{content:" (" attr(href) ")";font-size:9pt;word-break:break-all;}
 }
+
+/* ---------- research: figures and findings ---------- */
+.paper h4{font-weight:500;font-size:1.08rem;margin:22px 0 8px;}
+.paper h4::before{content:"";display:block;width:30px;height:2px;background:var(--accent);margin-bottom:10px;}
+.pfig{margin:22px 0 6px;max-width:620px;}
+.pfig img{width:100%;height:auto;display:block;border:1px solid var(--line);}
+.pfig figcaption{font-size:.92rem;color:var(--ink-soft);font-style:italic;margin-top:8px;line-height:1.45;}
+.findings{padding-left:20px;font-size:1.03rem;color:var(--ink-soft);margin:0;}
+.findings li{margin-bottom:9px;}

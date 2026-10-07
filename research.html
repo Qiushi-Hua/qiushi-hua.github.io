@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -40,7 +40,8 @@
     <h1>Research</h1>
     <p class="lede">
       I work on monetary policy and firms, mostly on what a rate shock does to
-      investment and R&amp;D. A longer account is in my
+      investment and R&amp;D. The job market paper below is the core of it. A longer
+      account of the agenda is in my
       <a href="research-statement.pdf">research statement</a>.
     </p>
   </section>
@@ -54,28 +55,84 @@
         <div class="yr">2026</div>
         <div>
           <h3>Monetary Policy and Firm Innovation</h3>
-          <p class="meta">JEL E52, O31, O32, O34</p>
+          <p class="meta">Job market paper &middot; JEL E52, O31, O32, O34</p>
           <p class="abs">
-            This paper asks how monetary policy affects firm innovation. I link
-            Compustat, USPTO and CRSP into a firm-level panel and estimate the
-            response to monetary policy shocks with local projections. Almost all of
-            the R&amp;D response runs through the intensive margin. An expansionary
-            shock raises R&amp;D spending and knowledge capital at firms that already
-            innovate and leaves the rest largely unmoved. The same shock lowers
-            patent counts but raises average citations per patent, and over the
-            medium run it raises patent importance and the share of high-impact
-            patents. A two-stage analysis attributes that shift to the R&amp;D response
-            itself rather than to a direct effect of the shock on patenting.
-            Contractionary shocks cut both the quantity and the quality of
-            innovation.
+            This paper studies how monetary policy shapes firm-level innovation, using
+            linked Compustat, USPTO and CRSP data with local projection methods. The
+            R&amp;D response to monetary policy operates almost entirely through the
+            intensive margin: expansionary shocks raise R&amp;D and knowledge capital
+            among firms already engaged in innovation, while other firms remain largely
+            unresponsive. On the output side, expansionary shocks lower the aggregate
+            number of patents but raise average citations and, over the medium run,
+            patent importance and the share of patents in the upper tail of the
+            importance distribution, consistent with firms reallocating R&amp;D from
+            incremental patenting toward higher-impact projects as financing conditions
+            ease. A two-stage analysis indicates that this reallocation operates through
+            the R&amp;D response itself rather than through a direct effect of the shock
+            on patenting. The effects are also asymmetric in sign: contractionary shocks
+            reduce both the quantity and quality of innovation, and this
+            reallocation-toward-quality channel is cleanest among economically large
+            shocks. Monetary policy therefore changes the direction of firms&rsquo; innovation
+            as well as its scale.
           </p>
+
+          <figure class="pfig">
+            <img src="img/jmp-citations-irf.jpg" alt="Impulse response of average citations per patent to a monetary policy loosening over twenty quarters, rising from zero to about five, with confidence bands" width="1164" height="874" loading="lazy">
+            <figcaption>Average citations per patent after a 100 basis point loosening, by quarter since the shock. The response is flat for the first year and then climbs, which is the medium-run quality effect in the abstract.</figcaption>
+          </figure>
+
+          <h4>Data</h4>
+          <p class="abs">
+            The panel joins five sources. CRSP-Compustat gives quarterly financials from
+            1990 to 2020; USPTO filings give patents granted from 1990 to 2017, with
+            citations, the Kogan, Papanikolaou, Seru and Stoffman market-value measure
+            and text-based importance; and the monetary policy shocks are the
+            high-frequency series used by Ottonello and Winberry, 164 shocks from
+            January 1990 to December 2007. Patent assignees and firm identifiers do not
+            line up cleanly across three decades of mergers and delistings, so a large
+            part of the work was the matching and the change log that lets any
+            estimate be rebuilt from raw files. Knowledge capital is built from R&amp;D
+            by the perpetual inventory method, following Peters and Taylor. The Great
+            Recession is left out of the estimation sample because high-frequency
+            identification stops working at the lower bound.
+          </p>
+
+          <h4>Method</h4>
+          <p class="abs">
+            Local projections trace the response of R&amp;D, knowledge capital and
+            patent outcomes to a shock over twenty quarters. Probit and Tobit models
+            separate the extensive margin, whether a firm starts doing R&amp;D, from the
+            intensive margin, how much an active firm spends. A two-stage design then
+            asks whether the patent response runs through the change in R&amp;D: the
+            first stage fits R&amp;D on the shock, the second regresses patent outcomes
+            on the fitted R&amp;D. Interacting shock sign with shock size separates
+            asymmetry from magnitude.
+          </p>
+
+          <h4>What the paper finds</h4>
+          <ul class="findings">
+            <li>The R&amp;D response is an intensive-margin story. Active innovators spend more after a loosening; the probability that an inactive firm starts cannot be told from zero at any horizon.</li>
+            <li>Output shifts from quantity to quality. Patent counts fall in the short run, average citations and importance rise over the medium run, and the share of patents in the upper tail of importance rises with them.</li>
+            <li>The shift runs through R&amp;D. Fitted R&amp;D explains the patent response; the direct effect of the shock on patenting adds little once R&amp;D is in the regression.</li>
+            <li>Easing and tightening are not mirror images. A contractionary shock lowers both the quantity and the quality of patents, and the quality reallocation is cleanest for economically large shocks.</li>
+            <li>Quality measures disagree with each other. Citation and text-based importance rise after a loosening; per-patent market value does not move reliably. Which proxy a study uses changes its answer.</li>
+          </ul>
+
+          <figure class="pfig">
+            <img src="img/jmp-rd-vs-capex.jpg" alt="Line chart of average R&amp;D spending and the physical investment rate for US firms from 1990 to 2017, both rising, with R&amp;D rising more steadily" width="2000" height="1200" loading="lazy">
+            <figcaption>Average R&amp;D spending (solid, left axis) and the physical investment rate (dashed, right axis) for Compustat firms, 1990 to 2017. R&amp;D grows through every downturn, which is part of why its response to policy looks different from physical investment.</figcaption>
+          </figure>
+
           <div class="plinks">
             <a href="jmp.pdf">Paper (PDF) &rarr;</a>
             <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5137261" target="_blank" rel="noopener">SSRN &rarr;</a>
           </div>
-          <span class="tag">Monetary Policy</span>
-          <span class="tag">Innovation</span>
-          <span class="tag">Local Projections</span>
+          <span class="tag">Compustat</span>
+          <span class="tag">USPTO</span>
+          <span class="tag">CRSP</span>
+          <span class="tag">Local projections</span>
+          <span class="tag">Probit and Tobit</span>
+          <span class="tag">Stata</span>
         </div>
       </article>
     </div>
@@ -84,23 +141,37 @@
   <div class="rule"></div>
 
   <section>
-    <h2 class="subhead">Other research</h2>
+    <h2 class="subhead">Work in progress</h2>
     <div class="paper-list">
       <article class="paper">
         <div class="yr">Ongoing</div>
         <div>
           <h3>Fixed Costs in Lumpy Investment Models</h3>
-          <p class="meta">Work in progress</p>
+          <p class="meta">Solo &middot; model and simulation stage</p>
           <p class="abs">
-            A model of heterogeneous firms investing under capital adjustment costs,
-            where each firm observes only a noisy signal of its own productivity. I
-            solve the dynamic program by value function iteration in Julia and
-            Matlab, then simulate transition paths after an aggregate shock. I
-            calibrate to observed investment patterns and check the results across a
-            grid of parameters.
+            The job market paper finds that innovation responds to monetary policy on
+            the intensive margin. For physical capital the literature finds the
+            opposite: the extensive margin, which firms invest at all, carries the
+            investment channel. This project looks at the physical side directly. Firms
+            are heterogeneous in productivity, face a fixed cost of adjusting capital,
+            and see only a noisy signal of their own productivity before they decide.
+            The question is how the fixed cost and the noise together decide which firms
+            move after an aggregate shock, and how much of the aggregate response they
+            account for.
           </p>
-          <span class="tag">Firm Dynamics</span>
-          <span class="tag">Structural Models</span>
+          <p class="abs">
+            I solve the firm&rsquo;s dynamic program by value function iteration in Julia and
+            Matlab, with forward and backward iteration checks for numerical stability,
+            calibrate the productivity process and the adjustment cost to observed
+            investment patterns, and trace transition paths after a shock with Monte
+            Carlo simulation across parameter grids and policy scenarios. The heavy
+            runs go to the UF HiPerGator cluster.
+          </p>
+          <span class="tag">Firm dynamics</span>
+          <span class="tag">Structural model</span>
+          <span class="tag">Value function iteration</span>
+          <span class="tag">Julia</span>
+          <span class="tag">Matlab</span>
         </div>
       </article>
 
@@ -110,13 +181,66 @@
           <h3>Labor Market and Skill Demand in AI Job Postings</h3>
           <p class="meta">Applied data project</p>
           <p class="abs">
-            I built a pipeline that reads several million online job postings,
-            classifies the roles and extracts the skills each one asks for. Topic
-            modeling and a supervised classifier do the text work. The output is a
-            dashboard that tracks employer demand by industry and region.
+            Several million online job postings, read by a pipeline that classifies
+            each role and pulls out the skills it asks for. The text work is
+            preprocessing, semantic feature extraction, a supervised classifier for the
+            role labels and topic modeling for the skill clusters. The output is a set of
+            interactive dashboards and trend reports on employer demand for AI-related
+            skills by industry and region. It is the hiring side of the technology
+            question my other work asks about investment: where in the labor market the
+            demand for these skills is spreading, and how fast.
           </p>
           <span class="tag">NLP</span>
-          <span class="tag">Machine Learning</span>
+          <span class="tag">Supervised learning</span>
+          <span class="tag">Topic modeling</span>
+          <span class="tag">Python</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section>
+    <h2 class="subhead">Where this is going</h2>
+    <div class="paper-list">
+      <article class="paper">
+        <div class="yr">Next</div>
+        <div>
+          <h3>A model of the quality margin</h3>
+          <p class="abs">
+            The reallocation from incremental to high-impact research is the central
+            empirical result of the job market paper, and it needs a model in which
+            firms choose between project types under financial frictions. The plan is a
+            heterogeneous-firm model where easier financing lowers the cost of
+            long-horizon, higher-risk projects, used to ask how much of the long-run
+            effect of monetary policy on productivity runs through the direction of
+            research rather than its volume.
+          </p>
+        </div>
+      </article>
+      <article class="paper">
+        <div class="yr">Next</div>
+        <div>
+          <h3>Why patent quality measures disagree</h3>
+          <p class="abs">
+            Citation-based and market-value measures of patent quality move differently
+            after a monetary shock. When do the two diverge, and what does each capture?
+            The answer matters for any study that uses patents to measure the returns to
+            innovation policy.
+          </p>
+        </div>
+      </article>
+      <article class="paper">
+        <div class="yr">Next</div>
+        <div>
+          <h3>Technology adoption and financial conditions</h3>
+          <p class="abs">
+            Joining the job-posting data to firm financial records would let me ask
+            whether credit conditions change how fast firms adopt new technologies such
+            as AI, which connects the adoption margin to the investment margins in the
+            job market paper.
+          </p>
         </div>
       </article>
     </div>
@@ -128,6 +252,6 @@
   <div>&copy; 2026 Qiushi Hua &middot; Gainesville, FL</div>
 </footer>
 
-<script src="site.js?v=9"></script>
+<script src="site.js?v=10"></script>
 </body>
 </html>
