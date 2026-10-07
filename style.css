@@ -120,6 +120,7 @@ footer .brand{font-size:1.05rem;}
 .cvlist dt{color:var(--accent);}
 .cvlist dd{color:var(--ink-soft);}
 .note{margin-top:24px;color:var(--ink-soft);font-size:1.02rem;}
+.note.lead{margin-top:0;margin-bottom:26px;max-width:46em;}
 @media(max-width:560px){
   .cvlist > div{grid-template-columns:1fr;gap:0;}
 }
