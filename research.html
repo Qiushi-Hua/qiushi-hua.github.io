@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=12">
+<link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -143,69 +143,62 @@
 
   <section>
     <h2 class="subhead">Work in progress</h2>
+    <p class="note lead">
+      Two papers with coauthors extend the same question, which margin of a firm&rsquo;s
+      investment a shock actually reaches, to new technology and to physical capital.
+    </p>
     <div class="paper-list">
       <article class="paper">
-        <div class="yr">Ongoing</div>
+        <div class="yr">Draft</div>
         <div>
-          <h3>Fixed Costs in Lumpy Investment Models</h3>
-          <p class="meta">Solo &middot; model and simulation stage</p>
+          <h3>Artificial Intelligence and Inventory Management: Evidence from U.S. Retail Industry</h3>
+          <p class="meta">With Shuang Chen, Min Fang, Boyuan Li and Baolian Wang &middot; draft available</p>
           <p class="abs">
-            My job market paper finds that innovation responds to monetary policy on the
-            intensive margin, among firms that already run R&amp;D. For physical capital the
-            literature finds the opposite. What carries the investment channel there is
-            the extensive margin, meaning which firms adjust their capital at all. This
-            project takes the physical side directly and asks what decides that margin.
+            Inventory is a hedge against forecast error and AI is a prediction technology, so
+            AI adoption should leave a trace on firms&rsquo; balance sheets. The difficulty is
+            measurement, since firms do not report where inside the organization they use AI.
+            We build function-level measures from the near-universe of U.S. online job
+            postings, Lightcast data covering more than 40,000 sources from 2010 to 2023. AI
+            vacancies are flagged by their machine-learning skill content and sorted into
+            marketing and supply-chain functions, then linked to Compustat for more than 1,300
+            public firms.
           </p>
           <p class="abs">
-            Firms in the model differ in productivity and pay a fixed cost whenever they
-            adjust capital, so investment arrives in lumps rather than a smooth stream.
-            Each firm also sees only a noisy signal of its own productivity before it
-            decides. The question is how the fixed cost and the signal noise together
-            select which firms move after an aggregate shock, and how much of the
-            aggregate response those firms account for.
+            Rising AI adoption compresses retailers&rsquo; cash conversion cycle, by about a week
+            of receivables per standard deviation of supply-chain AI, and the compression runs
+            through receivables rather than leaner inventory. Around the 2018 tariff
+            announcements, China-exposed retailers with more supply-chain AI lost significantly
+            less market value, an effect that builds over 40 to 80 trading days. Marketing AI
+            made no difference.
           </p>
-          <p class="abs">
-            I solve the firm&rsquo;s dynamic program by value function iteration in Julia and
-            Matlab, with forward and backward iteration checks for numerical stability. I
-            calibrate the productivity process and the adjustment cost to observed
-            investment patterns. Transition paths after a shock come from Monte Carlo
-            simulation, run across parameter grids and alternative policy scenarios. The
-            heavy runs go to the UF HiPerGator cluster.
-          </p>
-          <span class="tag">Firm dynamics</span>
-          <span class="tag">Structural model</span>
-          <span class="tag">Value function iteration</span>
-          <span class="tag">Julia</span>
-          <span class="tag">Matlab</span>
+          <span class="tag">AI adoption</span>
+          <span class="tag">Working capital</span>
+          <span class="tag">NLP</span>
+          <span class="tag">Event study</span>
         </div>
       </article>
 
       <article class="paper">
-        <div class="yr">2025</div>
+        <div class="yr">Ongoing</div>
         <div>
-          <h3>Labor Market and Skill Demand in AI Job Postings</h3>
-          <p class="meta">Applied data project</p>
+          <h3>Solving the Macro and Micro Investment Elasticity Inconsistency with Incomplete Information</h3>
+          <p class="meta">With Jonathan Adams, Min Fang and Eugenio Rojas &middot; draft in progress</p>
           <p class="abs">
-            Which skills are employers actually asking for as AI spreads, and where? This
-            project reads several million online job postings and turns them into a
-            measure of skill demand by industry and region.
+            Heterogeneous-firm investment models cannot match two elasticities at once. Fixed
+            costs small enough to fit the micro evidence leave aggregate investment far too
+            sensitive to interest rates, and fixed costs large enough to fit the macro
+            elasticity distort the micro margins. We argue that no calibration of fixed costs
+            alone resolves this, and that information is the missing friction.
           </p>
           <p class="abs">
-            The pipeline cleans the posting text and extracts semantic features from it. A
-            supervised classifier puts a role label on each posting, and topic modeling
-            groups the skills those postings ask for. Trend analysis on top of that tracks
-            how the demand moves over time. The output is a set of interactive dashboards
-            and trend reports.
+            Firms in our model pay fixed, partially irreversible and quadratic adjustment
+            costs, and each observes only a noisy signal of its own productivity. I solve the
+            model by value function iteration in Julia. Incomplete information dampens both
+            elasticities and narrows the gap between them.
           </p>
-          <p class="abs">
-            My other work asks what technology does to firm investment. This asks the
-            hiring side of the same question, where in the labor market demand for these
-            skills is spreading and how fast.
-          </p>
-          <span class="tag">NLP</span>
-          <span class="tag">Supervised learning</span>
-          <span class="tag">Topic modeling</span>
-          <span class="tag">Python</span>
+          <span class="tag">Firm dynamics</span>
+          <span class="tag">Structural model</span>
+          <span class="tag">Julia</span>
         </div>
       </article>
     </div>
@@ -264,6 +257,6 @@
   <div>&copy; 2026 Qiushi Hua &middot; Gainesville, FL</div>
 </footer>
 
-<script src="site.js?v=12"></script>
+<script src="site.js?v=13"></script>
 </body>
 </html>

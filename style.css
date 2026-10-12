@@ -178,6 +178,11 @@ footer .brand{font-size:1.05rem;}
 .course-body h3::before{content:"";display:block;width:30px;height:2px;background:var(--accent);margin-bottom:12px;}
 .course-body ul{padding-left:20px;font-size:1.03rem;color:var(--ink-soft);}
 .course-body li{margin-bottom:9px;}
+.evals{border-collapse:collapse;margin:2px 0 10px;font-size:1.03rem;}
+.evals th{text-align:left;font-weight:400;color:var(--ink-soft);padding:5px 30px 5px 0;}
+.evals td{padding:5px 0;white-space:nowrap;color:var(--ink-soft);}
+.evals tr:first-child th,.evals tr:first-child td{color:var(--ink);font-weight:500;}
+.evalnote{font-size:.97rem;color:var(--ink-soft);margin-top:2px;}
 .teach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:34px;margin-top:8px;}
 .teach-card{border-top:2px solid var(--accent);padding-top:16px;}
 .teach-card .tc-term{font-style:italic;color:var(--accent);font-size:.95rem;}
