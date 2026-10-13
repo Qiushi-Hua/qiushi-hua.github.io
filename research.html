@@ -79,7 +79,7 @@
 
           <figure class="pfig">
             <img src="img/jmp-citations-irf.jpg" alt="Impulse response of average citations per patent to a monetary policy loosening over twenty quarters, rising from zero to about five, with confidence bands" width="1164" height="874" loading="lazy">
-            <figcaption>Average citations per patent after a 100 basis point loosening, by quarter since the shock. The response is flat for the first year and then climbs, which is the medium-run quality effect in the abstract.</figcaption>
+            <figcaption>Average citations per patent after a 100 basis point loosening, by quarter since the shock. Citations barely move in the first year and rise after that.</figcaption>
           </figure>
 
           <h4>Data</h4>
@@ -112,12 +112,23 @@
 
           <h4>What the paper finds</h4>
           <ul class="findings">
-            <li>The R&amp;D response is an intensive-margin story. Active innovators spend more after a loosening; the probability that an inactive firm starts cannot be told from zero at any horizon.</li>
-            <li>Output shifts from quantity to quality. Patent counts fall in the short run, average citations and importance rise over the medium run, and the share of patents in the upper tail of importance rises with them.</li>
-            <li>The shift runs through R&amp;D. Fitted R&amp;D explains the patent response; the direct effect of the shock on patenting adds little once R&amp;D is in the regression.</li>
-            <li>Easing and tightening are not mirror images. A contractionary shock lowers both the quantity and the quality of patents, and the quality reallocation is cleanest for economically large shocks.</li>
-            <li>Quality measures disagree with each other. Citation and text-based importance rise after a loosening; per-patent market value does not move reliably. Which proxy a study uses changes its answer.</li>
+            <li>Firms that already do R&amp;D spend more after a loosening. For firms that do none, the probability of starting is indistinguishable from zero at every horizon.</li>
+            <li>Patent counts fall in the short run. Average citations and importance rise over the medium run, and so does the share of patents in the upper tail of importance.</li>
+            <li>The patent response runs through R&amp;D. Once fitted R&amp;D is in the regression, the shock itself adds little.</li>
+            <li>A loosening lowers patent counts and raises quality, but a tightening lowers both. The move toward quality is clearest for economically large shocks.</li>
+            <li>Citations and text-based importance rise after a loosening. Per-patent market value does not move reliably.</li>
           </ul>
+
+          <h4>Why it matters</h4>
+          <p class="abs">
+            Work on monetary policy and heterogeneous firms sorts the investment response by
+            leverage, liquidity, age and size. For innovation the split that matters most is
+            simpler: whether a firm does R&amp;D at all. The paper also gives work on monetary
+            policy and growth a firm-level channel, from the rate shock through R&amp;D spending
+            to the kind of patents firms produce. For innovation research, the disagreement
+            between quality measures means a study&rsquo;s answer can depend on which proxy it
+            uses.
+          </p>
 
           <figure class="pfig">
             <img src="img/jmp-rd-vs-capex.jpg" alt="Line chart of average R&amp;D spending and the physical investment rate for US firms from 1990 to 2017, both rising, with R&amp;D rising more steadily" width="2000" height="1200" loading="lazy">
@@ -144,8 +155,8 @@
   <section>
     <h2 class="subhead">Work in progress</h2>
     <p class="note lead">
-      Two papers with coauthors extend the same question, which margin of a firm&rsquo;s
-      investment a shock actually reaches, to new technology and to physical capital.
+      Two papers with coauthors look at other kinds of firm investment, in AI and in
+      physical capital.
     </p>
     <div class="paper-list">
       <article class="paper">
@@ -154,26 +165,43 @@
           <h3>Artificial Intelligence and Inventory Management: Evidence from U.S. Retail Industry</h3>
           <p class="meta">With Shuang Chen, Min Fang, Boyuan Li and Baolian Wang &middot; draft available</p>
           <p class="abs">
-            Inventory is a hedge against forecast error and AI is a prediction technology, so
-            AI adoption should leave a trace on firms&rsquo; balance sheets. The difficulty is
-            measurement, since firms do not report where inside the organization they use AI.
-            We build function-level measures from the near-universe of U.S. online job
-            postings, Lightcast data covering more than 40,000 sources from 2010 to 2023. AI
-            vacancies are flagged by their machine-learning skill content and sorted into
-            marketing and supply-chain functions, then linked to Compustat for more than 1,300
+            Firms hold inventory, and working capital more generally, because they cannot
+            forecast demand and supply exactly. AI lowers the cost of forecasting (Agrawal,
+            Gans and Goldfarb, 2019), so we ask two things about retailers. Does AI change how
+            they manage working capital, and does it help them when a supply chain breaks?
+          </p>
+          <p class="abs">
+            Firms do not report where they use AI, so we measure it from the near-universe of
+            U.S. online job postings: Lightcast data from more than 40,000 sources, 2010 to
+            2023. We flag AI vacancies by their machine-learning skills and sort them into
+            marketing and supply-chain jobs with a tiered keyword taxonomy that favors
+            precision over recall. The measures are linked to Compustat for more than 1,300
             public firms.
           </p>
           <p class="abs">
-            Rising AI adoption compresses retailers&rsquo; cash conversion cycle, by about a week
-            of receivables per standard deviation of supply-chain AI, and the compression runs
-            through receivables rather than leaner inventory. Around the 2018 tariff
-            announcements, China-exposed retailers with more supply-chain AI lost significantly
-            less market value, an effect that builds over 40 to 80 trading days. Marketing AI
-            made no difference.
+            In long differences over 2010 to 2023, rising AI adoption goes with a shorter cash
+            conversion cycle for retailers, by about a week of receivables per standard
+            deviation of supply-chain AI, and with essentially no change for other firms. The
+            shortening comes from receivables. Days receivables outstanding falls for all seven
+            AI measures we build, days inventory outstanding does not move in any
+            specification, and days payables falls for two of the seven. Listed retailers had
+            already squeezed most of the slack out of inventory before 2010, so the customer
+            side is where AI still had room to work.
+          </p>
+          <p class="abs">
+            The second test treats the 2018 U.S.-China tariff announcements as a supply-chain
+            shock, following the event-study design of Huang et al. (2023). We interact
+            pre-shock China-import exposure, retail status and 2017 AI intensity, with
+            buy-and-hold abnormal returns over 20 to 80 trading days as the outcome.
+            China-exposed retailers with more supply-chain AI lost significantly less market
+            value. The effect is zero on impact, shows up by about 40 trading days and keeps
+            growing through 80, and it does not appear for marketing AI. Without the
+            import-exposure control the sign flips, because AI-intensive retailers are also the
+            larger and more import-reliant firms that the tariffs exposed.
           </p>
           <span class="tag">AI adoption</span>
           <span class="tag">Working capital</span>
-          <span class="tag">NLP</span>
+          <span class="tag">Job postings</span>
           <span class="tag">Event study</span>
         </div>
       </article>
@@ -184,17 +212,23 @@
           <h3>Solving the Macro and Micro Investment Elasticity Inconsistency with Incomplete Information</h3>
           <p class="meta">With Jonathan Adams, Min Fang and Eugenio Rojas &middot; draft in progress</p>
           <p class="abs">
-            Heterogeneous-firm investment models cannot match two elasticities at once. Fixed
-            costs small enough to fit the micro evidence leave aggregate investment far too
-            sensitive to interest rates, and fixed costs large enough to fit the macro
-            elasticity distort the micro margins. We argue that no calibration of fixed costs
-            alone resolves this, and that information is the missing friction.
+            Heterogeneous-firm investment models cannot match two elasticities at once. One is
+            the macro elasticity, how much aggregate investment responds to the real interest
+            rate. The other is the micro elasticity, how firms move between the extensive and
+            intensive margins of investment. Fixed costs small enough to fit the micro evidence
+            (Cooper and Haltiwanger, 2006; Khan and Thomas, 2008) leave aggregate investment far
+            too sensitive to interest rates, and fixed costs large enough to fit the macro
+            elasticity (Winberry, 2021; Koby and Wolf, 2020) distort the micro margins.
           </p>
           <p class="abs">
-            Firms in our model pay fixed, partially irreversible and quadratic adjustment
-            costs, and each observes only a noisy signal of its own productivity. I solve the
-            model by value function iteration in Julia. Incomplete information dampens both
-            elasticities and narrows the gap between them.
+            We think fixed costs alone cannot fit both, so we add incomplete information. Firms
+            in our model pay fixed, partially irreversible and quadratic adjustment costs, and
+            each sees only a noisy signal of its own productivity. I solve the model by value
+            function iteration in Julia and compute the stationary distribution with the
+            non-stochastic method of Young (2010), so the moments carry no simulation error.
+            Starting from the Cooper-Haltiwanger and Khan-Thomas calibrations, we change only
+            the volatility of the information noise. More noise dampens both elasticities and
+            narrows the gap between them, and in some calibrations it closes the gap.
           </p>
           <span class="tag">Firm dynamics</span>
           <span class="tag">Structural model</span>
@@ -207,20 +241,20 @@
   <div class="rule"></div>
 
   <section>
-    <h2 class="subhead">Where this is going</h2>
+    <h2 class="subhead">Next projects</h2>
     <div class="paper-list">
       <article class="paper">
         <div class="yr">Next</div>
         <div>
           <h3>A model of the quality margin</h3>
           <p class="abs">
-            The reallocation from incremental to high-impact research is the central
-            empirical result of the job market paper, and it needs a model in which
-            firms choose between project types under financial frictions. The plan is a
-            heterogeneous-firm model where easier financing lowers the cost of
-            long-horizon, higher-risk projects, used to ask how much of the long-run
-            effect of monetary policy on productivity runs through the direction of
-            research rather than its volume.
+            The main empirical result of the job market paper is that easier financing
+            moves research from incremental toward high-impact projects. I plan a
+            heterogeneous-firm model in which firms choose between project types under
+            financial frictions, and easier financing lowers the cost of long-horizon,
+            higher-risk projects. With it I can ask how much of monetary policy&rsquo;s
+            long-run effect on productivity comes from the direction of research and how
+            much from its volume.
           </p>
         </div>
       </article>
@@ -229,10 +263,10 @@
         <div>
           <h3>Why patent quality measures disagree</h3>
           <p class="abs">
-            Citation-based and market-value measures of patent quality move differently
-            after a monetary shock. When do the two diverge, and what does each capture?
-            The answer matters for any study that uses patents to measure the returns to
-            innovation policy.
+            After a monetary shock, citation-based and market-value measures of patent
+            quality move differently. I want to work out when they diverge and what each
+            one measures, since the answer matters for any study that uses patents to
+            measure the returns to innovation policy.
           </p>
         </div>
       </article>
@@ -241,10 +275,9 @@
         <div>
           <h3>Technology adoption and financial conditions</h3>
           <p class="abs">
-            Joining the job-posting data to firm financial records would let me ask
-            whether credit conditions change how fast firms adopt new technologies such
-            as AI, which connects the adoption margin to the investment margins in the
-            job market paper.
+            With the job-posting data linked to firm financial records, I can test whether
+            credit conditions change how fast firms adopt technologies such as AI. That
+            would tie the AI paper to the investment results in the job market paper.
           </p>
         </div>
       </article>
